@@ -1,0 +1,87 @@
+<!-- HTML5 -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tarea 3</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flot-charts@0.8.3/jquery.flot.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div>
+            <h1>Eventos por dia</h1>
+            <div id="eventos-por-dia" style="width:100%; height:400px;">
+
+            </div>
+            <div class="oculto">
+                <table id="dataEventos">
+                    <thead>
+                        <tr>
+                            <td>Fecha</td>
+                            <td>Total</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br>
+        <div>
+            <h1>Eventos por tipo</h1>
+            <div id="eventos-por-tipo" style="width:100%; height:400px;">
+            </div>
+
+            <div class="oculto">
+                <table id="dataTipo">
+                    <thead>
+                        <tr>
+                            <td>Tipo</td>
+                            <td>Total</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div>
+            <h1>Eventos por hora de inicio</h1>
+            <div id="eventos-por-hora" style="width:100%; height:400px;">
+            </div>
+
+            <div class="oculto">
+                <table id="dataHora">
+                    <thead>
+                        <tr>
+                            <td>Fecha</td>
+                            <td>Antes de las 11:00</td>
+                            <td>Entre 11:01 y 14:59</td>
+                            <td>Después de las 15:00</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="estadisticas.js"></script>
+        <div>
+            <button class="volver" onclick="window.location='../cgi-bin/Tarea3/index.py'">Volver a la portada</button>
+        </div>
+    </div>
+    <script src="scriptTarea.js"></script>
+</body>
+
+</html>

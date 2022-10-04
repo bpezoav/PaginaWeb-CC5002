@@ -1,0 +1,199 @@
+<!-- HTML5 -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarea 3</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div class="main">
+
+    <ul class="topnav">
+        <li><a href="../cgi-bin/Tarea3/index.py">Portada</a></li>
+        <li><a href="form.html">Informar un evento</a></li>
+        <li><a href="../cgi-bin/Tarea3/mostrar_listado.py">Ver listado de eventos</a></button>
+        <li><a href="estadisticas.html">Estadísticas</a></li> 
+    </ul>
+
+    <form onsubmit="return false;" id="formulario" name="formulario" method="post" enctype="multipart/form-data" action="../cgi-bin/Tarea3/save_event.py">
+
+        <div class="negrita" id="informar-evento"><h1>Informacion del lugar</h1></div>
+        <br>
+        <div class="entrada">
+            <div class="leyenda">Región</div>
+            <select id="region" name="region">
+                <option value="" disabled selected>Seleccione una opción</option>
+                <option>Región Arica y Parinacota</option>
+                <option>Región de Tarapacá</option>
+                <option>Región de Antofagasta</option>
+                <option>Región de Atacama</option>
+                <option>Región de Coquimbo</option>
+                <option>Región de Valparaiso</option>
+                <option>Región Metropolitana de Santiago</option>
+                <option>Región del Libertador General Bernardo Ohiggins</option>
+                <option>Región del Maule</option>
+                <option>Región del Ñuble</option>
+                <option>Región del Biobío</option>
+                <option>Región de La Araucanía</option>
+                <option>Región de Los Ríos</option>
+                <option>Región de Los Lagos</option>
+                <option>Región Aisén del General Carlos Ibáñez del Campo</option>
+                <option>Región de Magallanes y la Antártica Chilena</option>
+            </select>
+        </div>
+
+        <div class="entrada">
+            <div class="leyenda">Comuna</div>
+            <select id="comuna" name="comuna">
+                <option value="" disabled selected>Seleccione una opción</option>
+            </select>
+        </div>
+
+        <div class="entrada">
+            <div class="leyenda">Sector</div>
+            <input type="text" maxlength="100" name="sector" id="sector">
+        </div>
+
+        <br>
+        <div class="negrita"> <h1>Datos del oferente:</h1> </div>
+        <br>
+        <div class="entrada">
+            <div class="leyenda">Nombre</div>
+            <input type="text" maxlength="200" id="nombre" name="nombre" placeholder="Nombre y Apellidos">
+        </div>
+
+        <div class="entrada">
+            <div class="leyenda">E-mail</div>
+            <input type="text" size="100" id="celular" name="email" placeholder="ejemplo@email.com">
+        </div>
+
+        <div class="entrada">
+            <div class="leyenda">Número de celular</div>
+            <input type="text" size="15" id="celular" name="celular" value="+56" placeholder="+56xxxxxxxxx">
+        </div>
+        <div class="entrada">
+            <div class="leyenda">Redes sociales</div>
+            <br>
+            <br>
+            <label>Twitter<input type="checkbox" id="twitter" onclick="chequear('twitter')"></label>
+            <br>
+            <label>Instagram<input type="checkbox" id="instagram" onclick="chequear('instagram')"></label>
+            <br>
+            <label>Facebook<input type="checkbox" id="facebook" onclick="chequear('facebook')"></label>
+            <br>
+            <label>Tik tok<input type="checkbox" id="tiktok" onclick="chequear('tiktok')"></label>
+            <br>
+            <label>Otra<input type="checkbox" id="otra" onclick="chequear('otra')"></label>
+        </div>
+
+        <div class="negrita"> <h1>Información del evento</h1> </div>
+        <br>
+        <div class="entrada">
+            <div class="leyenda">Día y hora de inicio</div>
+            <input type="text" id="dia-hora-inicio" name="dia-hora-inicio" size="20">
+        </div>
+
+        <div class="entrada">
+            <div class="leyenda">Día y hora término</div>
+            <input type="text" size="20" id="dia-hora-termino" name="dia-hora-termino" placeholder="aaaa-mm-dd hh:ss">
+        </div>
+
+        <div class="entrada">
+            <div class="leyenda">Descripción</div>
+            <textarea cols="50" rows="10" id="descripcion-evento" name='descripcion-evento'></textarea>
+        </div>
+
+        <div class="etrada">
+            <div class="leyenda">Tipo</div>
+            <select name="tipo-comida" id="tipo-comida">
+                <option value="" disabled selected>Seleccione una opción</option>
+                <option>Al Paso</option>
+                <option>Alemana</option>
+                <option>Árabe</option>
+                <option>Argentina</option>
+                <option>Asiática</option>
+                <option>Australiana</option>
+                <option>Brasileña</option>
+                <option>Café y Snacks</option>
+                <option>Carnes</option>
+                <option>Casera</option>
+                <option>Chilena</option>
+                <option>China</option>
+                <option>Cocina de Autor</option>
+                <option>Comida Rápida</option>
+                <option>Completos</option>
+                <option>Coreana</option>
+                <option>Cubana</option>
+                <option>Española</option>
+                <option>Exótica</option>
+                <option>Francesa</option>
+                <option>Gringa</option>
+                <option>Hamburguesa</option>
+                <option>Helados</option>
+                <option>India</option>
+                <option>Internacional</option>
+                <option>Italiana</option>
+                <option>Latinoamericana</option>
+                <option>Mediterránea</option>
+                <option>Mexicana</option>
+                <option>Nikkei</option>
+                <option>Parrillada</option>
+                <option>Peruana</option>
+                <option>Pescados y Mariscos</option>
+                <option>Picoteos</option>
+                <option>Pizzas</option>
+                <option>Pollos y Pavos</option>
+                <option>Saludable</option>
+                <option>Sandwiches</option>
+                <option>Suiza</option>
+                <option>Japonesa</option>
+                <option>Sushi</option>
+                <option>Tapas</option>
+                <option>Thai</option>
+                <option>Vegana</option>
+                <option>Vegetariana</option>
+            </select>
+        </div>
+
+        <div class="entrada">
+            <div class="leyenda">Fotos</div>
+            <input type="file" name="foto-comida" id="foto-comida" class="file-input" />
+            <button id="add_more" class="add_more">Agregar otra foto</button>
+        </div>
+
+        <br>
+        <div id="error"></div>
+        <br>
+
+        <div class="entrada botones">
+            <button id="myBtn">Enviar información de este evento</button>
+        </div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Enviar formulario
+                    <span onclick="cerrar()" class="close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <p>¿Está seguro que desea agregar este evento?</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="confirmacion" onclick="confirmacionEnvio()">Si, estoy seguro</button>
+                    <button id="rechazo" onclick="cerrar()">No, no estoy seguro, quiero volver al formulario</button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<script src="scriptTarea.js"></script>
+
+</body>
+
+</html>
